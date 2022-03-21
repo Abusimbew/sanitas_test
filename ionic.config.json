@@ -1,0 +1,7 @@
+{
+  "name": "sanitas_test_v1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

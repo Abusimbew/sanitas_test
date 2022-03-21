@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "sanitas_test_v1",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

@@ -1,0 +1,47 @@
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <div class="mainHeaderImage">
+      <img src="assets/images/logo.jpg" />
+    </div>
+    <ion-card>
+      <ion-card-content>
+        <form [formGroup]="loginForm">
+          <ion-list>
+            <ion-item>
+              <ion-label position="fixed">
+                <ion-icon name="person-outline"></ion-icon>
+              </ion-label>
+              <ion-input id="email" formControlName="email" placeholder="Email" type="email" name="email" [(ngModel)]="user.email">
+              </ion-input>
+            </ion-item>
+            <ion-item class="itemMargin">
+              <ion-label position="fixed">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+              </ion-label>
+              <ion-input id="password" formControlName="password" autocomplete="new-password" placeholder="Contraseña" type="password"
+                name="password" [(ngModel)]="user.password"></ion-input>
+            </ion-item>
+          </ion-list>
+        </form>
+        <div class="divContentRemember">
+          <div class="divRemember">
+            Recordar
+          </div>
+          <div class="divSwitch">
+            <ion-toggle color="secondary" (ionChange)="onChangeToggle()" [(ngModel)]="isToggleChecked"></ion-toggle>
+          </div>
+        </div>
+      </ion-card-content>
+      <ion-card-content class="contentLogin">
+        <div *ngIf="!isShowSpinner" class="divLogin" (click)="loginOnClick()">
+          Acceder
+        </div>
+        <div *ngIf="isShowSpinner" class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

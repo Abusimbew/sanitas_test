@@ -1,0 +1,141 @@
+#container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url(../../assets/images/background.jpg);
+  background-color: transparent;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  .mainHeaderImage {
+    width: 112px;
+    height: 111px;
+    margin: 30px auto;
+    margin-top: 40px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 3px #d8edff;
+
+    img {
+      height: 120px;
+      max-width: none;
+      margin-top: -9px;
+      margin-left: -7px;
+    }
+  }
+
+  ion-card {
+    width: 80%;
+    max-width: 450px;
+    min-width: 320px;
+    background-color: var(--ion-color-primary-contrast);
+    border-radius: 5px;
+
+    .itemMargin {
+      margin-top: 10px;
+    }
+
+    ion-card-content {
+      padding: 10px 20px;
+    }
+
+    ion-item {
+      --border-color: #c4c4c4;
+    }
+
+    ion-label {
+      color: #9e9e9e;
+      margin-bottom: 5px;
+
+      ion-icon {
+        font-size: 22px;
+      }
+    }
+
+    .label-fixed.sc-ion-label-md-h {
+      -ms-flex: 0 0 28px;
+      flex: 0 0 28px;
+      width: 28px;
+      min-width: 28px;
+      max-width: 200px;
+    }
+
+    .divContentRemember {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0 1px 0;
+
+      .divRemember {
+        color: #000000;
+        font-size: 18px;
+        margin-bottom: 4px;
+      }
+
+      .divSwitch {
+        ion-toggle {
+          padding: 6px 2px;
+          --background: #cacaca;
+          --handle-background: var(--ion-color-secondary-contrast);
+        }
+      }
+    }
+
+    .contentLogin {
+      text-align: center;
+      height: 54px;
+      padding: 0px;
+      background-color: var(--ion-color-primary);
+
+      .divLogin {
+        color: var(--ion-color-primary-contrast);
+        padding: 14px;
+        font-size: 1rem;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+}
+
+@media screen and (orientation:landscape) {
+  @media screen and (max-height: 495px) {
+    #container {
+      .mainHeaderImage {
+        margin: 15px auto;
+
+        img {
+          margin-bottom: 15px;
+        }
+      }
+
+      ion-card {
+        margin-top: 0px;
+
+        ion-card-content {
+          padding: 2px 20px;
+        }
+
+        .itemMargin {
+          margin-top: 2px;
+        }
+
+        .divContentRemember {
+          margin: 6px 0 0 0;
+        }
+
+        .contentLogin {
+          height: 44px;
+          .divLogin {
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}
