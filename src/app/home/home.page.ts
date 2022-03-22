@@ -81,7 +81,7 @@ export class HomePage {
   saveData() {
     if (this.isToggleChecked) {
       // Almacena objeto parseado a string en localStorage
-      if (!localStorage.getItem(this.REMEMBER_KEY)) localStorage.setItem(this.REMEMBER_KEY, JSON.stringify(this.user));
+      localStorage.setItem(this.REMEMBER_KEY, JSON.stringify(this.user));
     } else if (localStorage.getItem(this.REMEMBER_KEY)) localStorage.removeItem(this.REMEMBER_KEY);
   }
 
